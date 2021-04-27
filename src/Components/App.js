@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../Styles/App.css';
 
+import AddAppointments from './AddAppointments';
+
 class App extends Component {
   render() {
     return (
@@ -9,7 +11,7 @@ class App extends Component {
           <div className="row">
             <div className="col-md-12 bg-white">
               <div className="container">
-                <div>Add Appointments</div>
+                <AddAppointments />
                 <div>Search Appointments</div>
                 <div>List Appointments</div>
               </div>
