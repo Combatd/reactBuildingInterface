@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# React: Building an Interface
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+React.js is a JavaScript library for creating user interfaces that display dynamic data. Because of its reusable components and unique data-rendering approach, the interfaces you create with React are flexible, fast, and lightweight. Need another reason to choose React?
 
 ## Available Scripts
 
