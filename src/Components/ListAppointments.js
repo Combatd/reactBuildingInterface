@@ -12,7 +12,6 @@ class ListAppointments extends Component {
           });
 
         return (
-
             <div className="appointment-list item-list mb-3">
                 { this.props.appointments.map( item => (
                     <div className="pet-item col media py-3">
@@ -27,14 +26,13 @@ class ListAppointments extends Component {
                             </div>
             
                             <div className="owner-name">
-                            <span className="label-item">Owner: {item.ownerName}</span>
-                            <span>ownerName</span>
+                            <span className="label-item">Owner: </span>
+                            <span>{item.ownerName}</span>
                             </div>
                             <div className="apt-notes">{item.aptNotes}</div>
                         </div>
                     </div>
                 )) }
-
         </div>
         );
     }
