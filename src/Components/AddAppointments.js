@@ -23,7 +23,7 @@ class AddAppointments extends Component {
             aptNotes: this.state.aptNotes
         }
         // add the appointment with the form data
-        this.props.AddAppointment(tempApt)
+        this.props.addAppointment(tempApt)
         // reset the form state
         this.setState = {
             petName: '',

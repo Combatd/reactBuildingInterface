@@ -15,6 +15,7 @@ class App extends Component {
       lastIndex: 0,
     }
     this.deleteAppointment = this.deleteAppointment.bind(this);
+    this.addAppointment = this.addAppointment.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +40,16 @@ class App extends Component {
     });
   }
 
+  addAppointment(apt) {
+    let tempApts = this.state.myAppointments;
+    apt.aptId = this.state.lastIndex;
+    tempApts.unshift(apt);
+    this.setState({
+      myAppointments: tempApts,
+      lastIndex: this.state.lastIndex + 1
+    })
+  }
+
   deleteAppointment(apt) {
     let tempApts = this.state.myAppointments;
     tempApts = without(tempApts, apt); // without(array, element to delete)
@@ -58,7 +69,7 @@ class App extends Component {
                 <AddAppointments 
                   formDisplay={this.state.formDisplay} 
                   toggleForm={this.toggleForm}
-                  AddAppointments={this.AddAppointments}
+                  addAppointment={this.addAppointment}
                 />
                 <SearchAppointments />
                 <ListAppointments appointments={this.state.myAppointments} 
