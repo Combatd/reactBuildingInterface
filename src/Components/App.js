@@ -18,6 +18,7 @@ class App extends Component {
     }
     this.deleteAppointment = this.deleteAppointment.bind(this);
     this.addAppointment = this.addAppointment.bind(this);
+    this.changeOrder = this.changeOrder.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,13 @@ class App extends Component {
     this.setState({
       formDisplay: !this.state.formDisplay
     });
+  }
+
+  changeOrder(order, dir) {
+    this.setState({
+      orderBy: order,
+      orderDir: dir
+    })
   }
 
   addAppointment(apt) {
@@ -94,6 +102,7 @@ class App extends Component {
                 <SearchAppointments 
                   orderBy={this.state.orderBy}
                   orderDir={this.state.orderDir}
+                  changeOrder={this.changeOrder}
                 />
                 <ListAppointments appointments={filteredApts} 
                   deleteAppointment={this.deleteAppointment} />
