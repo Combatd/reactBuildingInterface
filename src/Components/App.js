@@ -33,6 +33,12 @@ class App extends Component {
       
   }
 
+  toggleForm = () => {
+    this.setState({
+      formDisplay: !this.state.formDisplay
+    });
+  }
+
   deleteAppointment(apt) {
     let tempApts = this.state.myAppointments;
     tempApts = without(tempApts, apt); // without(array, element to delete)
@@ -49,7 +55,10 @@ class App extends Component {
           <div className="row">
             <div className="col-md-12 bg-white">
               <div className="container">
-                <AddAppointments formDisplay={this.state.formDisplay} />
+                <AddAppointments 
+                  formDisplay={this.state.formDisplay} 
+                  toggleForm={this.toggleForm}
+                />
                 <SearchAppointments />
                 <ListAppointments appointments={this.state.myAppointments} 
                   deleteAppointment={this.deleteAppointment} />
