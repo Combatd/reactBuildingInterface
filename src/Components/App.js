@@ -58,6 +58,7 @@ class App extends Component {
                 <AddAppointments 
                   formDisplay={this.state.formDisplay} 
                   toggleForm={this.toggleForm}
+                  AddAppointments={this.AddAppointments}
                 />
                 <SearchAppointments />
                 <ListAppointments appointments={this.state.myAppointments} 
