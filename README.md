@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 React.js is a JavaScript library for creating user interfaces that display dynamic data. Because of its reusable components and unique data-rendering approach, the interfaces you create with React are flexible, fast, and lightweight. Need another reason to choose React?
 
+This repository contains a vetenarianry clinic single-page application for making appointments.
 ## Available Scripts
 
 In the project directory, you can run:
